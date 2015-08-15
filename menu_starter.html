@@ -6,7 +6,6 @@
       <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
       <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
       <script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
-      <!--navbar style to make it look slightly better-->
    </head>
    <!-- Body -->
    <body>
@@ -14,7 +13,7 @@
 	  
 	  
       <!-- Menu Page -->
-      <section id="menu" data-role="page">
+      <section id="starter" data-role="page">
          <!-- Header Div-->
          <div data-role="header">
             <!-- Back Button -->
@@ -22,30 +21,161 @@
             <!-- Title -->
             <h1>Starter</h1>
          </div>
-		 
-		 
          <!-- Div Dedicated to Main Content-->
          <div data-role="main" class="ui-content">
          <!-- -->
-         <h1 align="center">Hello world</h1>
-         <p align="center">Welcome to my first page</p>
-		 <!-- Collapsible content for info -->
-		 
-		 
+	 
 <div class="choice_list">
 <ul data-role="listview" data-inset="true">
-<li><a href="choose_restaurant.HTML" data-transition="slide"> Starters<span class="ui-li-count" > 5 </span></a> </li>
-<li><a href="choose_restaurant.HTML" data-transition="slide"> Pasta<span class="ui-li-count" > 1</span></a> </li>
-<li><a href="choose_restaurant.HTML" data-transition="slide"> Main Meals<span class="ui-li-count" > 5 </span></a> </li>
-<li><a href="choose_restaurant.HTML" data-transition="slide"> Pizzas <span class="ui-li-count" > 1</span></a> </li>
-<li><a href="choose_restaurant.HTML" data-transition="slide"> Dessert <span class="ui-li-count" > 1</span></a> </li>
+<li><a href="#soup" data-transition="slide"> Soups<span class="ui-li-count" > 3 </span></a> </li>
+<li><a href="#tbread" data-transition="slide"> Turkish Bread<span class="ui-li-count" > 1</span></a> </li>
 </ul>
 </div>
-		 
-		 
-
          </div>
       </section>
+	  
+	  
+	  
+	  
+	  
+	  <!-- Soup Page -->
+      <section id="soup" data-role="page">
+         <!-- Header Div-->
+         <div data-role="header">
+            <!-- Back Button -->
+            <a href="#starter" data-role="button" data-icon="home" data-iconpos="left" data-transition="pop" data-direction="reverse">Home</a>
+            <!-- Title -->
+            <h1>Soup</h1>
+         </div>
+         <!-- Div Dedicated to Main Content-->
+         <div data-role="main" class="ui-content">
+         <!-- -->
+<div class="choice_list">
+<ul data-role="listview" data-inset="true">
+<li><a href="#soup_minestrone" data-transition="slide"> Minestrone<span class="ui-li-count" > 1 </span></a> </li>
+<li><a href="#soup_chickennoodle" data-transition="slide"> Turkish Bread<span class="ui-li-count" > 1</span></a> </li>
+<li><a href="#pumpkin" data-transition="slide"> Turkish Bread<span class="ui-li-count" > 1</span></a> </li>
+</ul>
+</div>
+         </div>
+      </section>
+	  
+	  
+	  
+	  	  <!-- Soup_Minestrone Page -->
+      <section id="soup_minestrone" data-role="page">
+         <!-- Header Div-->
+         <div data-role="header">
+            <!-- Back Button -->
+            <a href="#soup" data-role="button" data-icon="home" data-iconpos="left" data-transition="pop" data-direction="reverse">Home</a>
+            <!-- Title -->
+            <h1>Minestrone</h1>
+         </div>
+         <!-- Div Dedicated to Main Content-->
+         <div data-role="main" class="ui-content">
+<!-- -->
+            <h1 align="center">Hello world</h1>
+            <p align="center">Welcome to my first page</p>
+			<!-- Collapsible content for info -->
+            <div data-role="collapsible">
+               <h1>1</h1>
+			   <!-- Text Inside Collapsible Content -->
+               <p>I'm the expanded content.</p>
+            </div>
+			<!-- Collapsible content for info -->
+            <div data-role="collapsible">
+               <h1>2</h1>
+			   <!-- Text Inside Collapsible Content -->
+               <p>I'm the expanded content.
+                  I'm the expanded content.
+                  I'm the expanded content.
+                  I'm the expanded content.
+                  I'm the expanded content.
+                  I'm the expanded content.
+                  I'm the expanded content.
+               </p>
+            </div>
+         </div>
+      </section>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  	  	  <!-- Turkish Bread_Minestrone Page -->
+      <section id="tbread" data-role="page">
+         <!-- Header Div-->
+         <div data-role="header">
+            <!-- Back Button -->
+            <a href="#starter" data-role="button" data-icon="home" data-iconpos="left" data-transition="pop" data-direction="reverse">Home</a>
+            <!-- Title -->
+            <h1>Turkish Bread</h1>
+         </div>
+         <!-- Div Dedicated to Main Content-->
+         <div data-role="main" class="ui-content">
+<!-- -->
+            <h1 align="center">Hello world</h1>
+            <p align="center">Welcome to my first page</p>
+			<!-- Collapsible content for info -->
+            <div data-role="collapsible">
+               <h1>1</h1>
+			   <!-- Text Inside Collapsible Content -->
+               <p>I'm the expanded content.</p>
+            </div>
+			<!-- Collapsible content for info -->
+            <div data-role="collapsible">
+               <h1>2</h1>
+			   <!-- Text Inside Collapsible Content -->
+               <p>I'm the expanded content.
+                  I'm the expanded content.
+                  I'm the expanded content.
+                  I'm the expanded content.
+                  I'm the expanded content.
+                  I'm the expanded content.
+                  I'm the expanded content.
+               </p>
+            </div>
+         </div>
+      </section>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
 	  
 	  
    </body>

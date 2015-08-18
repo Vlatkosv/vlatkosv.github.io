@@ -564,32 +564,11 @@ html body .ui-group-theme-c .ui-bar-inherit {
 .ui-overlay-c,
 .ui-page-theme-c,
 .ui-page-theme-c .ui-panel-wrapper {
-	
-	
-	
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,79161a+100 */
-background: #a90329; /* Old browsers */
-background: -moz-linear-gradient(top,  #a90329 0%, #8f0222 44%, #79161a 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a90329), color-stop(44%,#8f0222), color-stop(100%,#79161a)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #a90329 0%,#8f0222 44%,#79161a 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #a90329 0%,#8f0222 44%,#79161a 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #a90329 0%,#8f0222 44%,#79161a 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #a90329 0%,#8f0222 44%,#79161a 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#79161a',GradientType=0 ); /* IE6-9 */
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	}
+	background-color: #79161a /*{c-page-background-color}*/;
+	border-color: #c1272d /*{c-page-border}*/;
+	color: #ffffff /*{c-page-color}*/;
+	text-shadow: 0 /*{c-page-shadow-x}*/ 1px /*{c-page-shadow-y}*/ 0 /*{c-page-shadow-radius}*/ #444444 /*{c-page-shadow-color}*/;
+}
 /* Body: Read-only lists, text inputs, collapsible content */
 .ui-body-c,
 .ui-page-theme-c .ui-body-inherit,

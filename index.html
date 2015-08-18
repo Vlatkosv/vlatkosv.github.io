@@ -82,27 +82,29 @@
          <div data-role="collapsible">
             <h1>Basic Info</h1>
 			<!-- Text Inside Collapsible Content -->
-            <p>Name: Vlatko S</p>
-			<p>Age: 20</p>
-			<p>Location: Victoria</p>
+			<p></P>
+            <label>Name: Vlatko S</label>
+			<label>Age: 20</label>
+			<label>Location: Victoria</label>
          </div>
 		 <!-- Collapsible content for info -->
          <div data-role="collapsible">
             <h1>Projects</h1>
 			<!-- Text Inside Collapsible Content -->
             <p>
-			<a href="#home">This Website</a><p>	
-			<a href="http://www.google.com">Random Project 1</a><p>	
-			<a href="http://www.google.com">Random Project 2</a><p>
-			<a href="http://www.google.com">Random Project 3</a><p>
-			<a href="http://www.google.com">Random Project 4</a><p></p>			
+			<label><a href="#home">This Website</a></label>
+			<label><a href="http://www.google.com">Random Project 1</a></label>
+			<label><a href="http://www.google.com">Random Project 2</a></label>
+			<label><a href="http://www.google.com">Random Project 3</a></label>
+			<label><a href="http://www.google.com">Random Project 4</a></label>	
 			
          </div>
 		 <div data-role="collapsible">
             <h1>Contacts</h1>
 			<!-- Text Inside Collapsible Content -->
-            <p>Phone: <a href="tel:+1231231231">+1231231231</a></p>              
-			<p>Email: <a href="mailto:emailaddress@email.com">emailaddress@email.com</a></p> 
+			<p>
+            <label>Phone: <a href="tel:+1231231231">+1231231231</a></label>              
+			<label>Email: <a href="mailto:emailaddress@email.com">emailaddress@email.com</a></label> 
          </div>
 		 </div>
       </section>
@@ -139,7 +141,7 @@
 			<!-- Collapsible content for info -->
             <div data-role="collapsible">
                <h1>Store Hours</h1>
-			   <!-- Text Inside Collapsible Content -->
+			   <!-- Table Content -->
 <table style="width:400px">
   <tr>
     <td>Monday:</td>
@@ -177,8 +179,9 @@
 			<div data-role="collapsible">
             <h1>Loc</h1>
 			<!-- Text Inside Collapsible Content -->
-            <p>Phone: <a href="tel:+1231231231">+1231231231</a></p>              
-			<p>GM: <a href="https://www.google.com.au/maps/place/Deakin+University/@-38.1963426,144.3035993,16z/data=!4m2!3m1!1s0x0000000000000000:0xc0f7d39b2ebe86b2"> Google Maps</a></li></p> 
+			<p></p>
+            <label>Location: 75 Pigdons Rd, Waurn Ponds VIC 3216</label>              
+			<label>Map: <a href="https://www.google.com.au/maps/place/Deakin+University/@-38.1963426,144.3035993,16z/data=!4m2!3m1!1s0x0000000000000000:0xc0f7d39b2ebe86b2"> Google Maps</a></label> 
          </div>
          </div>
       </section>
@@ -212,6 +215,13 @@
 <input type="text" id="email" placeholder="email@email.com.au"/>
 <label>Phone No: *</label>
 <input type="text" id="phone" placeholder="1231231231"/>
+<label>User Rating:</label>
+	<select name="rating" id="rating" data-native-menu="false">
+	   <option value="one" class="one"> Excellent</option>
+	   <option value="two" class="two">Good</option>		
+	   <option value="three" class="three">Average</option>
+	   <option value="four" class="four">Poor</option>
+	</select>
 <label>Feedback:</label>
 <textarea id="message" placeholder="Please type your feedback here"></textarea>
 <input type="button" id="submit" value="Send Feedback"/>

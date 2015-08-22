@@ -1,199 +1,211 @@
 <!DOCTYPE html> 
+<!---------------------------
+Creator:	Vlatko Saplamaev 
+ID: 		213088779
+----------------------------->
 <html>
    <head>
       <title>Restaurant Vlatko</title>
-	  <meta charset="utf-8" />
+      <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <!--theme css files-->
-	  <link rel="stylesheet" href="theme/myTheme.css" />
-	  <link rel="stylesheet" href="theme/jquery.mobile.icons.min.css" />
+      <!--theme css files-->
+      <link rel="stylesheet" href="theme/myTheme.css" />
+      <link rel="stylesheet" href="theme/jquery.mobile.icons.min.css" />
       <!--new stylesheets--> 
-      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
       <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
       <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
-
       <!--navbar style to make it look indented-->
       <style>
          .navbar {
          margin: 0.6em 20px 0.8em;
          }
       </style>
-	  
-	  
    </head>
    <!-- Body -->
    <body>
-   
    
       <!-- Home Page -->
       <section id="home" data-role="page" data-theme="c">
          <!-- Div Dedicated to Main Content-->
          <div data-role="main" class="ui-content">
-		 <!-- Logo Image-->
-            <div style="text-align: center"><img src="images/logo.png" width="295" /></div>
-			<!--navbar-->
+            <!-- Logo Image-->
+            <div style="text-align: center">
+               <img src="images/logo.png" width="295" />
+            </div>
+            <!--navbar-->
             <nav data-role="navbar" class="navbar">
                <ul>
                   <!--link to go to restuarant information page-->
-                  <li><a href="#information" data-icon="info" data-iconpos="top" data-transition="pop">Restaurant Info</a></li>
-				  <!--link to go to menu page-->
-                  <li><a href="#menu" data-icon="bars" data-iconpos="top" data-transition="pop">Menu</a></li>
+                  <li>
+                     <a href="#information" data-icon="info" data-iconpos="top" data-transition="pop">Restaurant Info
+                     </a>
+                  </li>
+                  <!--link to go to menu page-->
+                  <li>
+                     <a href="#menu" data-icon="bars" data-iconpos="top" data-transition="pop">Menu
+                     </a>
+                  </li>
                </ul>
                <ul>
                   <!--link to locate page-->
-				  <li><a href="#locate" data-icon="navigation" data-iconpos="top" data-transition="pop">Locate Us!</a></li>
+                  <li>
+                     <a href="#locate" data-icon="navigation" data-iconpos="top" data-transition="pop">Locate Us!
+                     </a>
+                  </li>
                   <!--link to call feature-->
-				  <li><a href="tel:+1231231231" data-icon="phone" data-iconpos="top" data-transition="pop">Call us!</a></li>
-               </ul>			   
+                  <li>
+                     <a href="tel:+1231231231" data-icon="phone" data-iconpos="top" data-transition="pop">Call us!
+                     </a>
+                  </li>
+               </ul>
                <ul>
-	              <!--link to go to developer info page-->
-                  <li><a href="#developer" data-icon="info" data-iconpos="top" data-transition="pop"> Developer Info</a></li>		   
+                  <!--link to go to developer info page-->
+                  <li>
+                     <a href="#developer" data-icon="info" data-iconpos="top" data-transition="pop"> Developer Info
+                     </a>
+                  </li>
                   <!--link to go to feedback page-->
-                  <li><a href="#feedback" data-icon="mail" data-iconpos="top" data-transition="pop">Feedback</a></li>
-               </ul>  
+                  <li>
+                     <a href="#feedback" data-icon="mail" data-iconpos="top" data-transition="pop">Feedback
+                     </a>
+                  </li>
+               </ul>
             </nav>
-
-			
          </div>
       </section>
-	  <!--End of Home Page-->
-	  
-	  
-	  
-	  
-	  
+      <!--End of Home Page-->
 	  
       <!-- Developer Information Page -->
       <section id="developer" data-role="page" data-theme="c">
          <!-- Header Div-->
          <div data-role="header">
             <!-- Back Button -->
-            <a href="#home" data-role="button" data-icon="home" data-iconpos="left" data-transition="pop" data-direction="reverse">Home</a>
+            <a href="#home" data-role="button" data-icon="home" data-iconpos="left" data-transition="pop" data-direction="reverse">Home
+            </a>
             <!-- Title -->
             <h1>Developer Information</h1>
          </div>
          <!-- Div Dedicated to Main Content-->
          <div data-role="main" class="ui-content">
-         <!-- -->
-         <h1 align="center">Vlatko</h1>
-         <div style="text-align: center"><img src="images/developer.png" width="260" /></div>
-		 <!-- Collapsible content for info -->
-         <div data-role="collapsible">
-            <h1>Basic Info</h1>
-			<!-- Text Inside Collapsible Content -->
-			<p></P>
-            <label>Name: Vlatko S</label>
-			<label>Age: 20</label>
-			<label>Location: Victoria</label>
+            <!-- -->
+            <h1 align="center">Vlatko</h1>
+            <div style="text-align: center">
+               <img src="images/developer.png" width="260" />
+            </div>
+            <!-- Collapsible content for info -->
+            <div data-role="collapsible">
+               <h1>Basic Info</h1>
+               <!-- Text Inside Collapsible Content -->
+               <p></P>
+               <label>Name: Vlatko S</label>
+               <label>Age: 20</label>
+               <label>Location: Victoria</label>
+            </div>
+            <!-- Collapsible content for info -->
+            <div data-role="collapsible">
+               <h1>Projects</h1>
+               <!-- Text Inside Collapsible Content -->
+               <p>
+                  <label><a href="#home">This Website</a></label>
+                  <label><a href="http://www.google.com">Random Project 1</a></label>
+                  <label><a href="http://www.google.com">Random Project 2</a></label>
+                  <label><a href="http://www.google.com">Random Project 3</a></label>
+                  <label><a href="http://www.google.com">Random Project 4</a></label>	
+            </div>
+            <div data-role="collapsible">
+               <h1>Contacts</h1>
+               <!-- Text Inside Collapsible Content -->
+               <p>
+                  <label>Phone: 
+				  <a href="tel:+1231231231">+1231231231</a>
+				  </label>              
+                  <label>Email: 
+				  <a href="mailto:emailaddress@email.com">emailaddress@email.com</a>
+				  </label> 
+            </div>
          </div>
-		 <!-- Collapsible content for info -->
-         <div data-role="collapsible">
-            <h1>Projects</h1>
-			<!-- Text Inside Collapsible Content -->
-            <p>
-			<label><a href="#home">This Website</a></label>
-			<label><a href="http://www.google.com">Random Project 1</a></label>
-			<label><a href="http://www.google.com">Random Project 2</a></label>
-			<label><a href="http://www.google.com">Random Project 3</a></label>
-			<label><a href="http://www.google.com">Random Project 4</a></label>	
-			
-         </div>
-		 <div data-role="collapsible">
-            <h1>Contacts</h1>
-			<!-- Text Inside Collapsible Content -->
-			<p>
-            <label>Phone: <a href="tel:+1231231231">+1231231231</a></label>              
-			<label>Email: <a href="mailto:emailaddress@email.com">emailaddress@email.com</a></label> 
-         </div>
-		 </div>
       </section>
-	  <!--End of Developer Information Page-->
-	  
-	  
-	  
-	  
-	  
-	  
+      <!--End of Developer Information Page-->
 	  
       <!-- Restaurant Information Page -->
       <section id="information" data-role="page" data-theme="c">
-         <!-- Header Div-->
-         <div data-role="header">
-            <!-- Back Button -->
-            <a href="#home" data-role="button" data-icon="home" data-iconpos="left" data-transition="pop" data-direction="reverse">Home</a>
-            <!-- Title -->
-            <h1>Restaurant Information</h1>
+      <!-- Header Div-->
+      <div data-role="header">
+         <!-- Back Button -->
+         <a href="#home" data-role="button" data-icon="home" data-iconpos="left" data-transition="pop" data-direction="reverse">Home
+         </a>
+         <!-- Title -->
+         <h1>Restaurant Information</h1>
+      </div>
+      <!-- Div Dedicated to Main Content-->
+      <div data-role="main" class="ui-content">
+         <!-- -->
+         <!-- Logo Image-->
+         <div style="text-align: center">
+            <img src="images/restaurant.gif" width="300"/>
          </div>
-		 
-		 
-         <!-- Div Dedicated to Main Content-->
-         <div data-role="main" class="ui-content">
-            <!-- -->
-			 <!-- Logo Image-->
-            <div style="text-align: center"><img src="images/restaurant.gif" width="300"/></div>
-			<!-- Collapsible content for info -->
-            <div data-role="collapsible">
-               <h1>About us</h1>
-			   <!-- Text Inside Collapsible Content -->
-               <p>I'm the expanded content.</p>
-            </div>
-			<!-- Collapsible content for info -->
-            <div data-role="collapsible">
-               <h1>Store Hours</h1>
-			   <!-- Table Content -->
-<table style="width:400px">
-  <tr>
-    <td>Monday:</td>
-    <td>10am-10pm</td> 
-  </tr>
-  <tr>
-    <td>Tuesday:</td>
-    <td>10am-10pm</td> 
-  </tr>
-    <tr>
-    <td>Wednesday:</td>
-    <td>10am-10pm</td> 
-  </tr>
-  <tr>
-    <td>Thursday:</td>
-    <td>10am-10pm</td> 
-  </tr>
-   <tr>
-    <td>Friday:</td>
-    <td>10am-10pm</td> 
-  </tr>
-  <tr>
-    <td>Saturday:</td>
-    <td>10am-12pm</td> 
-  </tr>
-  <tr>
-    <td>Sunday:</td>
-    <td>10am-12pm</td> 
-  </tr>  
-</table>
-				
-				
-            </div>
-			
-			<div data-role="collapsible">
+         <!-- Collapsible content for info -->
+         <div data-role="collapsible">
+            <h1>About us</h1>
+            <!-- Text Inside Collapsible Content -->
+            <p>I'm the expanded content.</p>
+         </div>
+         <!-- Collapsible content for info -->
+         <div data-role="collapsible">
+            <h1>Store Hours</h1>
+            <!-- Table Content -->
+            <table style="width:400px">
+               <tr>
+                  <td>Monday:</td>
+                  <td>10am-10pm</td>
+               </tr>
+               <tr>
+                  <td>Tuesday:</td>
+                  <td>10am-10pm</td>
+               </tr>
+               <tr>
+                  <td>Wednesday:</td>
+                  <td>10am-10pm</td>
+               </tr>
+               <tr>
+                  <td>Thursday:</td>
+                  <td>10am-10pm</td>
+               </tr>
+               <tr>
+                  <td>Friday:</td>
+                  <td>10am-10pm</td>
+               </tr>
+               <tr>
+                  <td>Saturday:</td>
+                  <td>10am-12pm</td>
+               </tr>
+               <tr>
+                  <td>Sunday:</td>
+                  <td>10am-12pm</td>
+               </tr>
+            </table>
+         </div>
+         <div data-role="collapsible">
             <h1>Loc</h1>
-			<!-- Text Inside Collapsible Content -->
-			<p></p>
+            <!-- Text Inside Collapsible Content -->
+            <p></p>
             <label>Location: 75 Pigdons Rd, Waurn Ponds VIC 3216</label>              
-			<label>Map: <a href="https://www.google.com.au/maps/place/Deakin+University/@-38.1963426,144.3035993,16z/data=!4m2!3m1!1s0x0000000000000000:0xc0f7d39b2ebe86b2"> Google Maps</a></label> 
+            <label>Map: 
+            <a href="https://www.google.com.au/maps/place/Deakin+University/@-38.1963426,144.3035993,16z/data=!4m2!3m1!1s0x0000000000000000:0xc0f7d39b2ebe86b2"> Google Maps
+            </a></label> 
          </div>
-         </div>
+      </div>
       </section
       <!--End of Restaurant Information Page-->
 	  
-	  
-
-	  <!-- Feedback Page -->
+      <!-- Feedback Page -->
       <section id="feedback" data-role="page" data-theme="c">
          <!-- Header Div-->
          <div data-role="header">
             <!-- Back Button -->
-            <a href="#home" data-role="button" data-icon="home" data-iconpos="left" data-transition="pop" data-direction="reverse">Home</a>
+            <a href="#home" data-role="button" data-icon="home" data-iconpos="left" data-transition="pop" data-direction="reverse">Home
+            </a>
             <!-- Title -->
             <h1>Feedback</h1>
          </div>
@@ -201,320 +213,354 @@
          <div data-role="main" class="ui-content">
             <!-- -->
             <h1 align="center">Feedback Form</h1>
-			<!-- Collapsible content for info -->
-			
-			<!-- Div Form -->
-			<div id="mainform">
-<!-- Form -->
-<form id="form">
-<p id="returnmessage"></p>
-<label>Name: *</label>
-<input type="text" id="name" placeholder="Chris Cameron"/>
-<label>Email: *</label>
-<input type="text" id="email" placeholder="email@email.com.au"/>
-<label>Phone No: *</label>
-<input type="text" id="phone" placeholder="1231231231"/>
-<label>User Rating:</label>
-	<select name="rating" id="rating" data-native-menu="false">
-	   <option value="one" class="one"> Excellent</option>
-	   <option value="two" class="two">Good</option>		
-	   <option value="three" class="three">Average</option>
-	   <option value="four" class="four">Poor</option>
-	</select>
-<label>Feedback:</label>
-<textarea id="message" placeholder="Please type your feedback here"></textarea>
-<input type="button" id="submit" value="Send Feedback"/>
-</form>
-</div>
+            <!-- Collapsible content for info -->
+            <!-- Div Form -->
+            <div id="mainform">
+               <!-- Form -->
+               <form id="form">
+                  <p id="returnmessage"></p>
+                  <label>Name: *</label>
+                  <input type="text" id="name" placeholder="Chris Cameron"/>
+                  <label>Email: *</label>
+                  <input type="text" id="email" placeholder="email@email.com.au"/>
+                  <label>Phone No: *</label>
+                  <input type="text" id="phone" placeholder="1231231231"/>
+                  <label>User Rating:</label>
+                  <select name="rating" id="rating" data-native-menu="false">
+                     <option value="one" class="one"> Excellent</option>
+                     <option value="two" class="two">Good</option>
+                     <option value="three" class="three">Average</option>
+                     <option value="four" class="four">Poor</option>
+                  </select>
+                  <label>Feedback:</label>
+                  <textarea id="message" placeholder="Please type your feedback here">
+				  </textarea>
+                  <input type="button" id="submit" value="Send Feedback"/>
+               </form>
+            </div>
          </div>
       </section>
       <<!--End of Feedback Page-->
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	
-	  
 	  
       <!-- Menu Page -->
       <section id="menu" data-role="page" data-theme="c">
          <!-- Header Div-->
          <div data-role="header">
             <!-- Back Button -->
-            <a href="#home" data-role="button" data-icon="home" data-iconpos="left" data-transition="pop" data-direction="reverse">Home</a>
+            <a href="#home" data-role="button" data-icon="home" data-iconpos="left" data-transition="pop" data-direction="reverse">Home
+            </a>
             <!-- Title -->
             <h1>Menu</h1>
          </div>
          <!-- Div Dedicated to Main Content-->
          <div data-role="main" class="ui-content">
-		 <!-- Collapsible content for info --> 
-<div class="choice_list">
-<ul data-role="listview" data-inset="true">
-<li><a href="#starter" data-transition="slide"> Starters<span class="ui-li-count" > 4 </span></a> </li>
-<li><a href="#pasta" data-transition="slide"> Pasta<span class="ui-li-count" > 10</span></a> </li>
-<li><a href="#main" data-transition="slide"> Main Meals<span class="ui-li-count" > 9 </span></a> </li>
-<li><a href="#pizza" data-transition="slide"> Pizzas <span class="ui-li-count" > 14</span></a> </li>
-<li><a href="#dessert" data-transition="slide"> Dessert <span class="ui-li-count" > 5</span></a> </li>
-</ul>
-</div>
+            <!-- Collapsible content for info --> 
+            <div class="choice_list">
+               <ul data-role="listview" data-inset="true">
+                  <li>
+                     <a href="#starter" data-transition="slide"> Starters<span class="ui-li-count" > 4 </span></a>
+                  </li>
+                  <li>
+                     <a href="#pasta" data-transition="slide"> Pasta<span class="ui-li-count" > 10</span></a>
+                  </li>
+                  <li>
+                     <a href="#main" data-transition="slide"> Main Meals<span class="ui-li-count" > 9 </span></a>
+                  </li>
+                  <li>
+                     <a href="#pizza" data-transition="slide"> Pizzas <span class="ui-li-count" > 14</span></a>
+                  </li>
+                  <li>
+                     <a href="#dessert" data-transition="slide"> Dessert <span class="ui-li-count" > 5</span></a>
+                  </li>
+               </ul>
+            </div>
          </div>
       </section>
-      <!--End of Menu Page-->	  
+      <!--End of Menu Page-->
 	  
-	  
-	<!-- Starter Page -->
+      <!-- Starter Page -->
       <section id="starter" data-role="page" data-theme="c">
          <!-- Header Div-->
          <div data-role="header">
             <!-- Back Button -->
-            <a href="#menu" data-role="button" data-icon="back" data-iconpos="left" data-transition="slide" data-direction="reverse">Menu</a>
+            <a href="#menu" data-role="button" data-icon="back" data-iconpos="left" data-transition="slide" data-direction="reverse">Menu
+            </a>
             <!-- Title -->
             <h1>Starter</h1>
          </div>
          <!-- Div Dedicated to Main Content-->
          <div data-role="main" class="ui-content">
-         <!-- -->
-<div class="choice_list">
-<ul data-role="listview" data-inset="true" data-filter="true">
-<li><a href="#soup" data-transition="slide"> Soups<span class="ui-li-count" > 3 </span></a> </li>
-<li><a href="/menu/starter/tbread.html" data-transition="slide"> Turkish Bread</a> </li>
-</ul>
-</div> 
+            <!-- -->
+            <div class="choice_list">
+               <ul data-role="listview" data-inset="true" data-filter="true">
+                  <li>
+                     <a href="#soup" data-transition="slide"> Soups<span class="ui-li-count" > 3 </span></a>
+                  </li>
+                  <li>
+                     <a href="/menu/starter/tbread.html" data-transition="slide"> Turkish Bread</a>
+                  </li>
+               </ul>
+            </div>
          </div>
-      </section>  
-<!--End of Starter Page-->
+      </section>
+      <!--End of Starter Page-->
 	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	<!-- Soup Selection Page -->
+      <!-- Soup Selection Page -->
       <section id="soup" data-role="page" data-theme="c">
          <!-- Header Div-->
          <div data-role="header">
             <!-- Back Button -->
-            <a href="#starter" data-role="button" data-icon="back" data-iconpos="left" data-transition="slide" data-direction="reverse">Starter</a>
+            <a href="#starter" data-role="button" data-icon="back" data-iconpos="left" data-transition="slide" data-direction="reverse">Starter
+            </a>
             <!-- Title -->
             <h1>Soup</h1>
          </div>
          <!-- Div Dedicated to Main Content-->
          <div data-role="main" class="ui-content">
-         <!-- -->
-<div class="choice_list">
-<ul data-role="listview" data-inset="true" data-filter="true">
-<li><a href="/menu/starter/soup/minestrone.html" data-transition="slide">Minestrone Soup</a> </li>
-<li><a href="/menu/starter/soup/chickennoodle.html" data-transition="slide">Chicken Noodle Soup</a> </li>
-<li><a href="/menu/starter/soup/pumpkin.html" data-transition="slide">Pumpkin Soup</a> </li>
-</ul>
-</div>
+            <!-- -->
+            <div class="choice_list">
+               <ul data-role="listview" data-inset="true" data-filter="true">
+                  <li>
+                     <a href="/menu/starter/soup/minestrone.html" data-transition="slide">Minestrone Soup</a>
+                  </li>
+                  <li>
+                     <a href="/menu/starter/soup/chickennoodle.html" data-transition="slide">Chicken Noodle Soup</a>
+                  </li>
+                  <li>
+                     <a href="/menu/starter/soup/pumpkin.html" data-transition="slide">Pumpkin Soup</a>
+                  </li>
+               </ul>
+            </div>
          </div>
-      </section>  
-      <!--End of Soup Selection Page-->	  
+      </section>
+      <!--End of Soup Selection Page-->	 
 	  
-	  
-	  
-	  
-	  
-<!-- Pasta Page -->
+      <!-- Pasta Page -->
       <section id="pasta" data-role="page" data-theme="c">
          <!-- Header Div-->
          <div data-role="header">
             <!-- Back Button -->
-            <a href="#menu" data-role="button" data-icon="back" data-iconpos="left" data-transition="slide" data-direction="reverse">Menu</a>
+            <a href="#menu" data-role="button" data-icon="back" data-iconpos="left" data-transition="slide" data-direction="reverse">Menu
+            </a>
             <!-- Title -->
             <h1>Pasta</h1>
          </div>
          <!-- Div Dedicated to Main Content-->
          <div data-role="main" class="ui-content">
-         <!-- -->
-<div class="choice_list">
-<ul data-role="listview" data-inset="true" data-filter="true">
-<li><a href="/menu/pasta/barcarola.html" data-transition="slide">Barcarola</a> </li>
-<li><a href="/menu/pasta/bolognaise.html" data-transition="slide">Bolognaise</a> </li>
-<li><a href="/menu/pasta/carbonara.html" data-transition="slide">Carbonara</a> </li>
-<li><a href="/menu/pasta/chickenavo.html" data-transition="slide">Chicken Avocado</a> </li>
-<li><a href="/menu/pasta/lamb.html" data-transition="slide">Lamb</a> </li>
-<li><a href="/menu/pasta/lasagne.html" data-transition="slide">Lasagne</a> </li>
-<li><a href="/menu/pasta/marinara.html" data-transition="slide">Marinara</a> </li>
-<li><a href="/menu/pasta/napoli.html" data-transition="slide">Napoli</a> </li>
-<li><a href="/menu/pasta/papalina.html" data-transition="slide">Papalina</a> </li>
-<li><a href="/menu/pasta/vegetarian.html" data-transition="slide">Vegetarian</a> </li>
-</ul>
-</div>
+            <!-- -->
+            <div class="choice_list">
+               <ul data-role="listview" data-inset="true" data-filter="true">
+                  <li>
+                     <a href="/menu/pasta/barcarola.html" data-transition="slide">Barcarola</a>
+                  </li>
+                  <li>
+                     <a href="/menu/pasta/bolognaise.html" data-transition="slide">Bolognaise</a>
+                  </li>
+                  <li>
+                     <a href="/menu/pasta/carbonara.html" data-transition="slide">Carbonara</a>
+                  </li>
+                  <li>
+                     <a href="/menu/pasta/chickenavo.html" data-transition="slide">Chicken Avocado</a>
+                  </li>
+                  <li>
+                     <a href="/menu/pasta/lamb.html" data-transition="slide">Lamb</a>
+                  </li>
+                  <li>
+                     <a href="/menu/pasta/lasagne.html" data-transition="slide">Lasagne</a>
+                  </li>
+                  <li>
+                     <a href="/menu/pasta/marinara.html" data-transition="slide">Marinara</a>
+                  </li>
+                  <li>
+                     <a href="/menu/pasta/napoli.html" data-transition="slide">Napoli</a>
+                  </li>
+                  <li>
+                     <a href="/menu/pasta/papalina.html" data-transition="slide">Papalina</a>
+                  </li>
+                  <li>
+                     <a href="/menu/pasta/vegetarian.html" data-transition="slide">Vegetarian</a>
+                  </li>
+               </ul>
+            </div>
          </div>
       </section>
-	  <!--End of Pasta Page-->
+      <!--End of Pasta Page-->
 	  
-	  
-<!-- Main Meals Page -->
+      <!-- Main Meals Page -->
       <section id="main" data-role="page" data-theme="c">
          <!-- Header Div-->
          <div data-role="header">
             <!-- Back Button -->
-            <a href="#menu" data-role="button" data-icon="back" data-iconpos="left" data-transition="slide" data-direction="reverse">Menu</a>
+            <a href="#menu" data-role="button" data-icon="back" data-iconpos="left" data-transition="slide" data-direction="reverse">Menu
+            </a>
             <!-- Title -->
             <h1>Main Meals</h1>
          </div>
          <!-- Div Dedicated to Main Content-->
          <div data-role="main" class="ui-content">
-         <!-- -->
-<div class="choice_list">
-<ul data-role="listview" data-inset="true" data-filter="true">
-<li><a href="/menu/main/cgfish.html" data-transition="slide"> Crumbed or Grilled Fish</a> </li>
-<li><a href="/menu/main/chickenkebab.html" data-transition="slide"> Chicken Shish Kebab</a> </li>
-<li><a href="/menu/main/chickenparmi.html" data-transition="slide"> Chicken Parmigiana</a> </li>
-<li><a href="/menu/main/fillethouse.html" data-transition="slide"> Fillet of the House</a> </li>
-<li><a href="/menu/main/gporterhouse.html" data-transition="slide"> Grilled Porterhouse</a> </li>
-<li><a href="/menu/main/lambkebab.html" data-transition="slide"> Lamb Shish Kebab</a> </li>
-<li><a href="/menu/main/refsteak.html" data-transition="slide"> Rib Eye Fillet Steak</a> </li>
-<li><a href="/menu/main/seafood.html" data-transition="slide"> Seafood Platter</a> </li>
-<li><a href="/menu/main/turkishkebab.html" data-transition="slide"> Turkish Mixed Kebab</a> </li>
-</ul>
-</div>
+            <!-- -->
+            <div class="choice_list">
+               <ul data-role="listview" data-inset="true" data-filter="true">
+                  <li>
+                     <a href="/menu/main/cgfish.html" data-transition="slide"> Crumbed or Grilled Fish</a>
+                  </li>
+                  <li>
+                     <a href="/menu/main/chickenkebab.html" data-transition="slide"> Chicken Shish Kebab</a>
+                  </li>
+                  <li>
+                     <a href="/menu/main/chickenparmi.html" data-transition="slide"> Chicken Parmigiana</a>
+                  </li>
+                  <li>
+                     <a href="/menu/main/fillethouse.html" data-transition="slide"> Fillet of the House</a>
+                  </li>
+                  <li>
+                     <a href="/menu/main/gporterhouse.html" data-transition="slide"> Grilled Porterhouse</a>
+                  </li>
+                  <li>
+                     <a href="/menu/main/lambkebab.html" data-transition="slide"> Lamb Shish Kebab</a>
+                  </li>
+                  <li>
+                     <a href="/menu/main/refsteak.html" data-transition="slide"> Rib Eye Fillet Steak</a>
+                  </li>
+                  <li>
+                     <a href="/menu/main/seafood.html" data-transition="slide"> Seafood Platter</a>
+                  </li>
+                  <li>
+                     <a href="/menu/main/turkishkebab.html" data-transition="slide"> Turkish Mixed Kebab</a>
+                  </li>
+               </ul>
+            </div>
          </div>
       </section>
-	  <!--End of Main Meals Page-->
+      <!--End of Main Meals Page-->
 	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-<!-- Pizza Page -->
+      <!-- Pizza Page -->
       <section id="pizza" data-role="page" data-theme="c">
          <!-- Header Div-->
          <div data-role="header">
             <!-- Back Button -->
-            <a href="#menu" data-role="button" data-icon="back" data-iconpos="left" data-transition="slide" data-direction="reverse">Menu</a>
+            <a href="#menu" data-role="button" data-icon="back" data-iconpos="left" data-transition="slide" data-direction="reverse">Menu
+            </a>
             <!-- Title -->
             <h1>Pizza</h1>
          </div>
          <!-- Div Dedicated to Main Content-->
          <div data-role="main" class="ui-content">
-         <!-- -->
-<div class="choice_list">
-<ul data-role="listview" data-inset="true" data-filter="true">
-<li><a href="/menu/pizza/american.html" data-transition="slide"> American</a> </li>
-<li><a href="/menu/pizza/aussie.html" data-transition="slide"> Aussie</a> </li>
-<li><a href="/menu/pizza/californian.html" data-transition="slide"> Californian</a> </li>
-<li><a href="/menu/pizza/capricciosa.html" data-transition="slide"> Capricciosa</a> </li>
-<li><a href="/menu/pizza/chicken.html" data-transition="slide"> Chicken</a> </li>
-<li><a href="/menu/pizza/hawaiian.html" data-transition="slide"> Hawaiian</a> </li>
-<li><a href="/menu/pizza/house.html" data-transition="slide"> House Special</a> </li>
-<li><a href="/menu/pizza/margherita.html" data-transition="slide"> Margherita</a> </li>
-<li><a href="/menu/pizza/marinara.html" data-transition="slide"> Marinara</a> </li>
-<li><a href="/menu/pizza/meatlovers.html" data-transition="slide"> Meat Lovers</a> </li>
-<li><a href="/menu/pizza/mexican.html" data-transition="slide"> Mexican</a> </li>
-<li><a href="/menu/pizza/spicylamb.html" data-transition="slide"> Spicy Lamb</a> </li>
-<li><a href="/menu/pizza/thelot.html" data-transition="slide"> The Lot</a> </li>
-<li><a href="/menu/pizza/vegetarian.html" data-transition="slide"> Vegetarian</a> </li>
-</ul>
-</div>
+            <!-- -->
+            <div class="choice_list">
+               <ul data-role="listview" data-inset="true" data-filter="true">
+                  <li>
+                     <a href="/menu/pizza/american.html" data-transition="slide"> American</a>
+                  </li>
+                  <li>
+                     <a href="/menu/pizza/aussie.html" data-transition="slide"> Aussie</a>
+                  </li>
+                  <li>
+                     <a href="/menu/pizza/californian.html" data-transition="slide"> Californian</a>
+                  </li>
+                  <li>
+                     <a href="/menu/pizza/capricciosa.html" data-transition="slide"> Capricciosa</a>
+                  </li>
+                  <li>
+                     <a href="/menu/pizza/chicken.html" data-transition="slide"> Chicken</a>
+                  </li>
+                  <li>
+                     <a href="/menu/pizza/hawaiian.html" data-transition="slide"> Hawaiian</a>
+                  </li>
+                  <li>
+                     <a href="/menu/pizza/house.html" data-transition="slide"> House Special</a>
+                  </li>
+                  <li>
+                     <a href="/menu/pizza/margherita.html" data-transition="slide"> Margherita</a>
+                  </li>
+                  <li>
+                     <a href="/menu/pizza/marinara.html" data-transition="slide"> Marinara</a>
+                  </li>
+                  <li>
+                     <a href="/menu/pizza/meatlovers.html" data-transition="slide"> Meat Lovers</a>
+                  </li>
+                  <li>
+                     <a href="/menu/pizza/mexican.html" data-transition="slide"> Mexican</a>
+                  </li>
+                  <li>
+                     <a href="/menu/pizza/spicylamb.html" data-transition="slide"> Spicy Lamb</a>
+                  </li>
+                  <li>
+                     <a href="/menu/pizza/thelot.html" data-transition="slide"> The Lot</a>
+                  </li>
+                  <li>
+                     <a href="/menu/pizza/vegetarian.html" data-transition="slide"> Vegetarian</a>
+                  </li>
+               </ul>
+            </div>
          </div>
-      </section>  
-	  <!--End of Pizzas Page-->
+      </section>
+      <!--End of Pizzas Page-->
 	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-<!-- Dessert Page -->
+      <!-- Dessert Page -->
       <section id="dessert" data-role="page" data-theme="c">
          <!-- Header Div-->
          <div data-role="header">
             <!-- Back Button -->
-            <a href="#menu" data-role="button" data-icon="back" data-iconpos="left" data-transition="slide" data-direction="reverse">Menu</a>
+            <a href="#menu" data-role="button" data-icon="back" data-iconpos="left" data-transition="slide" data-direction="reverse">Menu
+            </a>
             <!-- Title -->
             <h1>Dessert</h1>
          </div>
          <!-- Div Dedicated to Main Content-->
          <div data-role="main" class="ui-content">
-         <!-- -->
-<div class="choice_list">
-<ul data-role="listview" data-inset="true" data-filter="true">
-<li><a href="/menu/dessert/applepie.html" data-transition="slide"> Apple Pie</a> </li>
-<li><a href="/menu/dessert/bananafritter.html" data-transition="slide"> Banana Fritter</a> </li>
-<li><a href="/menu/dessert/pancake.html" data-transition="slide"> Pancake</a> </li>
-<li><a href="/menu/dessert/profiteroles.html" data-transition="slide"> Profiteroles</a> </li>
-<li><a href="/menu/dessert/sundaes.html" data-transition="slide"> Sundaes</a> </li>
-</ul>
-</div>
+            <!-- -->
+            <div class="choice_list">
+               <ul data-role="listview" data-inset="true" data-filter="true">
+                  <li>
+                     <a href="/menu/dessert/applepie.html" data-transition="slide"> Apple Pie</a>
+                  </li>
+                  <li> 
+                     <a href="/menu/dessert/bananafritter.html" data-transition="slide"> Banana Fritter</a>
+                  </li>
+                  <li>
+                     <a href="/menu/dessert/pancake.html" data-transition="slide"> Pancake</a>
+                  </li>
+                  <li>
+                     <a href="/menu/dessert/profiteroles.html" data-transition="slide"> Profiteroles</a>
+                  </li>
+                  <li>
+                     <a href="/menu/dessert/sundaes.html" data-transition="slide"> Sundaes</a>
+                  </li>
+               </ul>
+            </div>
          </div>
       </section>
-	  <!--End of Desserts Page-->
+      <!--End of Desserts Page-->
 	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	        <!-- Locate Us Page -->
+      <!-- Locate Us Page -->
       <section id="locate" data-role="page" data-theme="c">
          <!-- Header Div-->
          <div data-role="header">
             <!-- Back Button -->
-            <a href="#home" data-role="button" data-icon="home" data-iconpos="left" data-transition="pop" data-direction="reverse">Home</a>
+            <a href="#home" data-role="button" data-icon="home" data-iconpos="left" data-transition="pop" data-direction="reverse">Home
+            </a>
             <!-- Title -->
             <h1>Locate Us</h1>
          </div>
          <!-- Div Dedicated to Main Content-->
          <div data-role="main" class="ui-content">
-		 
-		 <!-- Location with Google Maps API -->
-		 <iframe text-align="center" width="100%" height="400" frameborder="0" style="border:0"
-src="https://www.google.com/maps/embed/v1/place?q=75+Pigdons+Road,+Waurn+Ponds,+Victoria,+Australia&key=AIzaSyDdFOTYlDi4IyotVK_Z1POQFj1skD15aB4" allowfullscreen></iframe>
-	 	    <!--link to google maps-->
+            <!-- Location with Google Maps API -->
+            <iframe text-align="center" width="100%" height="400" frameborder="0" style="border:0"
+               src="https://www.google.com/maps/embed/v1/place?q=75+Pigdons+Road,+Waurn+Ponds,+Victoria,+Australia&key=AIzaSyDdFOTYlDi4IyotVK_Z1POQFj1skD15aB4" allowfullscreen>
+            </iframe>
+            <!--link to google maps-->
             <nav data-role="navbar" class="not_navbar">
                <ul>
-                  <li><a href="https://www.google.com.au/maps/place/Deakin+University/@-38.1963426,144.3035993,16z/data=!4m2!3m1!1s0x0000000000000000:0xc0f7d39b2ebe86b2" data-icon="navigation" data-iconpos="top" data-transition="pop">Launch in Google Maps</a></li>
+                  <li>
+                     <a href="https://www.google.com.au/maps/place/Deakin+University/@-38.1963426,144.3035993,16z/data=!4m2!3m1!1s0x0000000000000000:0xc0f7d39b2ebe86b2" data-icon="navigation" data-iconpos="top" data-transition="pop">
+                     Launch in Google Maps</a>
+                  </li>
                </ul>
             </nav>
-		 </div>
+         </div>
       </section>
-	  <!--End of Locate Us Page-->
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
+      <!--End of Locate Us Page-->
 	  
    </body>
 </html>

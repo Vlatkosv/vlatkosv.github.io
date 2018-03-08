@@ -23,18 +23,15 @@ function buyBuildingOne(){
     document.getElementById('costBuildingOne').innerHTML = nextCost;  //updates the cursor cost for the user
 };
 
-//Loop every second
+//Autoclicker function
 window.setInterval(function(){
 	coinsClick(BuildingOne);
 }, 1000);
 
 
 
-//Save code
-
-
+//Save button code
 function saveButton(){
-
   var save = {
       coins: coins,
       BuildingOne: BuildingOne
@@ -42,6 +39,7 @@ function saveButton(){
     		localStorage.setItem('save', JSON.stringify(save));
 }
 
+//load button code
 function loadButton(){
 var savegame = JSON.parse(localStorage.getItem("save"));
 
@@ -51,8 +49,24 @@ if (typeof savegame.BuildingOne !== "undefined") BuildingOne = savegame.Building
     document.getElementById('BuildingOne').innerHTML = BuildingOne;
 }
 
-
+//delete save button code coz yolo
 function delsaveButton(){
-
   localStorage.removeItem("save")
+}
+
+
+//autosave every 5 seconds function
+window.setInterval(function(){
+	saveButton();
+}, 5000);
+
+
+//autoload
+function checkSave(){
+  var savegame = JSON.parse(localStorage.getItem("save"));
+
+  if (typeof savegame.coins !== "undefined") coins = savegame.coins;
+      document.getElementById('coins').innerHTML = coins;
+  if (typeof savegame.BuildingOne !== "undefined") BuildingOne = savegame.BuildingOne;
+      document.getElementById('BuildingOne').innerHTML = BuildingOne;
 }

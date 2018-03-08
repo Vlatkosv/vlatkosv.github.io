@@ -1,3 +1,19 @@
+//autosave every 5 seconds function
+window.setInterval(function(){
+	saveButton();
+}, 5000);
+
+
+//autoload
+function checkSave(){
+  var savegame = JSON.parse(localStorage.getItem("save"));
+
+  if (typeof savegame.coins !== "undefined") coins = savegame.coins;
+      document.getElementById('coins').innerHTML = coins;
+  if (typeof savegame.BuildingOne !== "undefined") BuildingOne = savegame.BuildingOne;
+      document.getElementById('BuildingOne').innerHTML = BuildingOne;
+}
+
 //main currency
 var coins = 0;
 
@@ -52,21 +68,4 @@ if (typeof savegame.BuildingOne !== "undefined") BuildingOne = savegame.Building
 //delete save button code coz yolo
 function delsaveButton(){
   localStorage.removeItem("save")
-}
-
-
-//autosave every 5 seconds function
-window.setInterval(function(){
-	saveButton();
-}, 5000);
-
-
-//autoload
-function checkSave(){
-  var savegame = JSON.parse(localStorage.getItem("save"));
-
-  if (typeof savegame.coins !== "undefined") coins = savegame.coins;
-      document.getElementById('coins').innerHTML = coins;
-  if (typeof savegame.BuildingOne !== "undefined") BuildingOne = savegame.BuildingOne;
-      document.getElementById('BuildingOne').innerHTML = BuildingOne;
 }

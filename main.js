@@ -1,7 +1,41 @@
-//autosave every 5 seconds function
+//autosave every 5 seconds function //// CHANGE VALUE BACK TO 5000!!!! ////
 window.setInterval(function(){
 	saveButton();
-}, 5000);
+}, 600000);
+
+
+
+
+var dateAFKLogout = 0;
+//set the variable for the first timer
+var dateAFKSave = 0;
+
+//get current date and time
+var dateCurrent = new Date();
+
+var dateLogout = minutecalc(dateCurrent);
+var dateLogin = minutecalc(dateCurrent);
+var dateAFK = 0;
+
+
+function minutecalc(input){
+  //set a variable for the date: 1st of Jan 2018, as a reference
+  var dateReference = new Date("2018-01-01T12:00:00Z");
+	//calculate the difference between current date and reference date
+	var dateDifference = dateReference.getTime() - dateCurrent.getTime();
+	//turn the difference into minutes
+	var dateMinute = dateDifference / 60000;
+	//convert the difference in minutes into a number
+	var dateMinuteS = Math.abs(dateMinute);
+	//round the number up to remove decimals
+	var dateMinuteR = roundup(dateMinuteS);
+  //put the following math back into the input variable and return it
+  input = dateMinuteR;
+	return input;
+}
+
+
+
 
 
 //autoload
@@ -10,6 +44,9 @@ function checkSave(){
 		loadButton();
 		//start the real-time timer
 		startTime();
+
+		afkGains()
+
 }
 
 //main currency
@@ -50,7 +87,8 @@ function saveButton(){
   var save = {
       coins: coins,
       BuildingOne: BuildingOne,
-			nextBuildingOneCost: nextBuildingOneCost
+			nextBuildingOneCost: nextBuildingOneCost,
+			dateAFKSave: dateLogout
   }
     		localStorage.setItem('save', JSON.stringify(save));
 }
@@ -66,6 +104,10 @@ if (typeof savegame.BuildingOne !== "undefined") BuildingOne = savegame.Building
 
 if (typeof savegame.nextBuildingOneCost !== "undefined") nextBuildingOneCost = savegame.nextBuildingOneCost;
 		document.getElementById('costBuildingOne').innerHTML = nextBuildingOneCost;
+
+if (typeof savegame.dateAFKSave !== "undefined") dateAFKSave = savegame.dateAFKSave, dateAFKLogout = savegame.dateAFKSave;
+		document.getElementById('timedif').innerHTML = dateAFKSave;
+
 }
 
 //delete save button code coz yolo
@@ -77,40 +119,41 @@ function delsaveButton(){
 
 
 
+//round the numbers to get rid of rogue decimals
+function prettify(input){
+    var output = Math.round(input * 1000000)/1000000;
+	return output;
+}
+
+
+//round the numbers up to get rid of decimals all together
+function roundup(input){
+    input = Math.ceil(input);
+	return input;
+}
 
 
 
-//<p id="timedif"></p>
+function afkGains(TBD){
 
-//set date for 1st of Jan 2018
-//var t1 = new Date("2018-01-01T12:00:00Z");
-//get current date and time
-//var t2 = new Date();
-//calculate the difference
-//var dif = t1.getTime() - t2.getTime();
+dateAFK = dateLogin - dateAFKLogout;
 
-//TD = time difference between t1 and t2
-//turn the difference into minutes
-//var TD = dif / 60000;
-//tbd=time between dates
-//var TBD = Math.abs(TD);
+		document.getElementById("timedif2").innerHTML = dateLogin;
+		document.getElementById('timedif3').innerHTML = dateAFKLogout;
+		document.getElementById('timedif4').innerHTML = dateAFK;
+		document.getElementById("timedif5").innerHTML = dateLogout;
 
-//document.getElementById("timedif").innerHTML = TBD;
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
 
-//time
+
+
+
+
+
+//time, dont need this shit, delete soon once the afk gains starts working
 
 var today = 0;
 var h = 0;

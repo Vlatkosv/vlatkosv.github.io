@@ -1,23 +1,32 @@
-//autosave every 5 seconds function //// CHANGE VALUE BACK TO 5000!!!! ////
-window.setInterval(function(){
-	saveButton();
-}, 600000);
 
 
 
 
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////
+///////////////////////Anything to do with afk gains////////////////////////
+////////////////////////////////////////////////////////////////////////////
+
+
+//value of dateLogout that is loaded in the game from the save
 var dateAFKLogout = 0;
-//set the variable for the first timer
+//value of dateLogout that is kept into save
 var dateAFKSave = 0;
-
 //get current date and time
 var dateCurrent = new Date();
-
+//calculate the minute value of time of logout
 var dateLogout = minutecalc(dateCurrent);
+//calculate the minute value of time of login
 var dateLogin = minutecalc(dateCurrent);
+//variable of minute difference between logout and login
 var dateAFK = 0;
 
-
+//function to calculate the minute value in comparison to the reference date
 function minutecalc(input){
   //set a variable for the date: 1st of Jan 2018, as a reference
   var dateReference = new Date("2018-01-01T12:00:00Z");
@@ -34,20 +43,26 @@ function minutecalc(input){
 	return input;
 }
 
+function afkGains(){
 
+dateAFK = dateLogin - dateAFKLogout;
 
-
-
-//autoload
-function checkSave(){
-
-		loadButton();
-		//start the real-time timer
-		startTime();
-
-		afkGains()
+		document.getElementById("timedif2").innerHTML = dateLogin;
+		document.getElementById('timedif3').innerHTML = dateAFKLogout;
+		document.getElementById('timedif4').innerHTML = dateAFK;
+		document.getElementById("timedif5").innerHTML = dateLogout;
 
 }
+
+
+
+
+
+
+
+
+
+
 
 //main currency
 var coins = 0;
@@ -59,8 +74,15 @@ function coinsClick(number){
     document.getElementById("coins").innerHTML = coins;
 };
 
-// Building One's Code
+
+
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////BuildingOne's Code/////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+
+
 var BuildingOne = 0;
+var BuildingOneMultiplier = 1;
 var nextBuildingOneCost = 0;
 
 function buyBuildingOne(){
@@ -75,12 +97,71 @@ function buyBuildingOne(){
     document.getElementById('costBuildingOne').innerHTML = nextBuildingOneCost;  //updates the cursor cost for the user
 };
 
+
 //Autoclicker function
-window.setInterval(function(){
+function startBuildingOne(){
+  var timeout = 0;
 	coinsClick(BuildingOne);
-}, 1000);
+	timeout = setTimeout(startBuildingOne, (1000 / BuildingOneMultiplier))
+}
 
 
+		var upgradecostBuildingOne1 = 100;
+		var upgradecostBuildingOne2 = 1000;
+
+function upgradeBuildingOne1(){
+    if(coins >= upgradecostBuildingOne1){
+			BuildingOneMultiplier = 1.1;
+					document.getElementById('BuildingOneMultiplier').innerHTML = BuildingOneMultiplier;
+					document.getElementById('upgradeBuildingOne1').disabled = true;
+					document.getElementById('upgradeBuildingOne1').style.display = "none";
+					document.getElementById('upgradecostBuildingOne1').style.display = "none";
+					document.getElementById('upgradeBuildingOne2').disabled = false;
+		}
+}
+
+
+
+
+function upgradeCosts(){
+		document.getElementById('upgradeBuildingOne2').disabled = true;
+
+
+		document.getElementById('BuildingOneMultiplier').innerHTML = BuildingOneMultiplier;
+		document.getElementById('upgradecostBuildingOne1').innerHTML = upgradecostBuildingOne1;
+		document.getElementById('upgradecostBuildingOne2').innerHTML = upgradecostBuildingOne2;
+
+}
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////
+/////////////////////Anything to do with saving/loading/////////////////////
+////////////////////////////////////////////////////////////////////////////
+
+
+//autosave every 5 seconds function //// CHANGE VALUE BACK TO 5000!!!! ////
+window.setInterval(function(){
+	saveButton();
+}, 15000);
+
+//what happens when game is loaded
+function checkSave(){
+    //manual load button function, has all the loading functions inside it
+		loadButton();
+		//start the real-time clock
+		startTime();
+		//start the autoclicker for building one
+		startBuildingOne();
+		//function to calculate afk progress
+    upgradeCosts();
+
+		afkGains()
+}
 
 //Save button code
 function saveButton(){
@@ -116,7 +197,9 @@ function delsaveButton(){
 }
 
 
-
+////////////////////////////////////////////////////////////////////////////
+/////////////////////Random functions to clean up code/////////////////////
+////////////////////////////////////////////////////////////////////////////
 
 
 //round the numbers to get rid of rogue decimals
@@ -133,27 +216,9 @@ function roundup(input){
 }
 
 
-
-function afkGains(TBD){
-
-dateAFK = dateLogin - dateAFKLogout;
-
-		document.getElementById("timedif2").innerHTML = dateLogin;
-		document.getElementById('timedif3').innerHTML = dateAFKLogout;
-		document.getElementById('timedif4').innerHTML = dateAFK;
-		document.getElementById("timedif5").innerHTML = dateLogout;
-
-}
-
-
-
-
-
-
-
-
-
-//time, dont need this shit, delete soon once the afk gains starts working
+////////////////////////////////////////////////////////////////////////////
+///////////////////////////////Real time clock//////////////////////////////
+////////////////////////////////////////////////////////////////////////////
 
 var today = 0;
 var h = 0;

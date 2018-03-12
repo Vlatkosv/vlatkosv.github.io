@@ -47,9 +47,6 @@ function afkGains(){
 //calculate the time between login and logout in minutes
 dateAFK = dateLogin - dateAFKLogout;
 
-
-
-
 		document.getElementById("timedif2").innerHTML = dateLogin;
 		document.getElementById('timedif3').innerHTML = dateAFKLogout;
 		document.getElementById('timedif4').innerHTML = dateAFK;
@@ -58,6 +55,8 @@ dateAFK = dateLogin - dateAFKLogout;
 
 var afkBuildingOne = 1000 / BuildingOneMultiplier;
 
+
+  alert(afkBuildingOne);
 
 }
 
@@ -143,13 +142,13 @@ function upgradeBuildingOne2(){
 
 function upgradeCosts(){
 		document.getElementById('upgradeBuildingOne2').disabled = true;
+
 	  if(upgradevalidBuildingOne1 >= 1){
 			document.getElementById('upgradeBuildingOne1').disabled = true;
 			document.getElementById('upgradeBuildingOne1').style.display = "none";
 			document.getElementById('upgradecostBuildingOne1').style.display = "none";
 			document.getElementById('upgradeBuildingOne2').disabled = false;
 		}
-
     if(upgradevalidBuildingOne2 >= 1){
 			document.getElementById('upgradeBuildingOne2').disabled = true;
 			document.getElementById('upgradeBuildingOne2').style.display = "none";
@@ -209,7 +208,8 @@ function saveButton(){
 			nextBuildingOneCost: nextBuildingOneCost,
 			dateAFKSave: dateLogout,
 			BuildingOneMultiplier: BuildingOneMultiplier,
-			upgradevalidBuildingOne1: upgradevalidBuildingOne1
+			upgradevalidBuildingOne1: upgradevalidBuildingOne1,
+      upgradevalidBuildingOne2: upgradevalidBuildingOne2
   }
     		localStorage.setItem('save', JSON.stringify(save));
 }
@@ -257,6 +257,7 @@ if (typeof savegame.upgradevalidBuildingOne2 !== "undefined") upgradevalidBuildi
 //delete save button code coz yolo
 function delsaveButton(){
   localStorage.removeItem("save")
+  location.reload();
 }
 
 

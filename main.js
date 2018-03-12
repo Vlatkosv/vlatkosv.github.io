@@ -56,7 +56,8 @@ dateAFK = dateLogin - dateAFKLogout;
 		document.getElementById("timedif5").innerHTML = dateLogout;
 
 
-var afkBuildingOne = 1000 * 1.1
+var afkBuildingOne = 1000 / BuildingOneMultiplier;
+
 
 }
 
@@ -121,7 +122,20 @@ function upgradeBuildingOne1(){
     if(coins >= upgradecostBuildingOne1){
 			BuildingOneMultiplier = 1.1;
 			upgradevalidBuildingOne1 = 1;
+      coins = coins - upgradecostBuildingOne1;
+      document.getElementById('coins').innerHTML = coins;
+			document.getElementById('BuildingOneMultiplier').innerHTML = BuildingOneMultiplier;
+					upgradeCosts();
+		}
+}
+
+function upgradeBuildingOne2(){
+    if(coins >= upgradecostBuildingOne2){
+			BuildingOneMultiplier = 1.5;
+			upgradevalidBuildingOne2 = 1;
+      coins = coins - upgradecostBuildingOne2;
 					document.getElementById('BuildingOneMultiplier').innerHTML = BuildingOneMultiplier;
+          document.getElementById('coins').innerHTML = coins;  //updates the number of coins for the user
 					upgradeCosts();
 		}
 }
@@ -136,6 +150,12 @@ function upgradeCosts(){
 			document.getElementById('upgradeBuildingOne2').disabled = false;
 		}
 
+    if(upgradevalidBuildingOne2 >= 1){
+			document.getElementById('upgradeBuildingOne2').disabled = true;
+			document.getElementById('upgradeBuildingOne2').style.display = "none";
+			document.getElementById('upgradecostBuildingOne2').style.display = "none";
+			//document.getElementById('upgradeBuildingOne3').disabled = false;
+		}
 
 
 		document.getElementById('BuildingOneMultiplier').innerHTML = BuildingOneMultiplier;
@@ -183,6 +203,7 @@ function checkSave(){
 //Save button code
 function saveButton(){
   var save = {
+      firstTime: firstTime,
       coins: coins,
       BuildingOne: BuildingOne,
 			nextBuildingOneCost: nextBuildingOneCost,
@@ -212,6 +233,8 @@ if(firstTime >= 1){
   firstTime = 0;
 }
 
+if (typeof savegame.firstTime !== "undefined") firstTime = savegame.firstTime;
+
 if (typeof savegame.coins !== "undefined") coins = savegame.coins;
     document.getElementById('coins').innerHTML = coins;
 if (typeof savegame.BuildingOne !== "undefined") BuildingOne = savegame.BuildingOne;
@@ -227,7 +250,7 @@ if (typeof savegame.BuildingOneMultiplier !== "undefined") BuildingOneMultiplier
 		document.getElementById('BuildingOneMultiplier').innerHTML = BuildingOneMultiplier;
 
 if (typeof savegame.upgradevalidBuildingOne1 !== "undefined") upgradevalidBuildingOne1 = savegame.upgradevalidBuildingOne1;
-
+if (typeof savegame.upgradevalidBuildingOne2 !== "undefined") upgradevalidBuildingOne2 = savegame.upgradevalidBuildingOne2;
 
 };
 

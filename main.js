@@ -162,16 +162,22 @@ window.setInterval(function(){
 
 //what happens when game is loaded
 function checkSave(){
+
     //manual load button function, has all the loading functions inside it
-		loadButton();
-		//start the real-time clock
-		startTime();
+    loadButton();
+
+    //start the real-time clock
+    startTime();
+
 		//start the autoclicker for building one
 		startBuildingOne();
+
 		//function to calculate afk progress
     upgradeCosts();
 
 		afkGains();
+
+
 }
 
 //Save button code
@@ -187,9 +193,24 @@ function saveButton(){
     		localStorage.setItem('save', JSON.stringify(save));
 }
 
+
+
+
+
+
+
+var firstTime = 1;
+
 //load button code
 function loadButton(){
 var savegame = JSON.parse(localStorage.getItem("save"));
+
+if(firstTime >= 1){
+  startTime();
+  startBuildingOne();
+  upgradeCosts();
+  firstTime = 0;
+}
 
 if (typeof savegame.coins !== "undefined") coins = savegame.coins;
     document.getElementById('coins').innerHTML = coins;
@@ -207,7 +228,8 @@ if (typeof savegame.BuildingOneMultiplier !== "undefined") BuildingOneMultiplier
 
 if (typeof savegame.upgradevalidBuildingOne1 !== "undefined") upgradevalidBuildingOne1 = savegame.upgradevalidBuildingOne1;
 
-}
+
+};
 
 //delete save button code coz yolo
 function delsaveButton(){

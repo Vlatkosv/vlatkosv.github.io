@@ -52,18 +52,26 @@ dateAFK = dateLogin - dateAFKLogout;
 		document.getElementById('timedif4').innerHTML = dateAFK;
 		document.getElementById("timedif5").innerHTML = dateLogout;
 
-//date afk convert into ms
+//date afk convert into seconds
+
+
+if(dateAFK > 1){
+
 var dateAFKMS = dateAFK * 60;
 
-var afkBuildingOne = (dateAFKMS * (BuildingOne * BuildingOneMultiplier))
+  var afkBuildingOne = (dateAFKMS * (BuildingOne * BuildingOneMultiplier))
 
-//afkCoins = afkBuildingOne + afkBuildingTwo;
+  //afkCoins = afkBuildingOne + afkBuildingTwo;
 
-coins = coins + afkBuildingOne;
+  coins = coins + afkBuildingOne;
 
-document.getElementById('coins').innerHTML = coins;  //updates the number of coins for the user
+  document.getElementById('coins').innerHTML = coins;  //updates the number of coins for the user
 
-  alert("Welcome back! While you were away you gained: " + afkBuildingOne + " Coins");
+    alert("Welcome back! While you were away you gained: " + afkBuildingOne + " Coins");
+
+}
+
+
 
 }
 

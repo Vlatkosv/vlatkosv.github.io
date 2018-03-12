@@ -171,7 +171,7 @@ function checkSave(){
 		//function to calculate afk progress
     upgradeCosts();
 
-		afkGains()
+		afkGains();
 }
 
 //Save button code
@@ -201,6 +201,9 @@ if (typeof savegame.nextBuildingOneCost !== "undefined") nextBuildingOneCost = s
 
 if (typeof savegame.dateAFKSave !== "undefined") dateAFKSave = savegame.dateAFKSave, dateAFKLogout = savegame.dateAFKSave;
 		document.getElementById('timedif').innerHTML = dateAFKSave;
+
+if (typeof savegame.BuildingOneMultiplier !== "undefined") BuildingOneMultiplier = savegame.BuildingOneMultiplier;
+		document.getElementById('BuildingOneMultiplier').innerHTML = BuildingOneMultiplier;
 
 if (typeof savegame.upgradevalidBuildingOne1 !== "undefined") upgradevalidBuildingOne1 = savegame.upgradevalidBuildingOne1;
 
